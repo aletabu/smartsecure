@@ -1,0 +1,33 @@
+//
+// Prefix header for all source files of the 'Smart Secure' target in the 'Smart Secure' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+// Integration
+#define kBaseURL @"http://smart-integration.no-ip.org"
+// Test
+//#define kBaseURL @"http://190.2.33.1:8001"
+//#define kBaseURL @"http://apps.smartsecure.com.ar"
+
+
+
+#define kCheckLoginURL [kBaseURL stringByAppendingString:@"/api/v1/user/token-auth/"]
+#define kUserInfoUpdate [kBaseURL stringByAppendingString:@"/api/v1/user/member_networks_info/"]
+#define kSendPanicURL [kBaseURL stringByAppendingString:@"/api/v1/user/panic_message/"]
+#define kSendLocalizationURL [kBaseURL stringByAppendingString:@"/api/v1/user/panic_coordinates_message/"]
+#define kSendMessageURL [kBaseURL stringByAppendingString:@"/api/v1/user/panic_secondary_message/"]
+#define kGetIncidentsMessagesURL [kBaseURL stringByAppendingString:@"/api/v1/user/privatenetwork/syncevent"]
+#define kSendIncidentMessageURL1 [kBaseURL stringByAppendingString:@"/api/v1/user/event/"]
+#define kSendIncidentMessageURL2 @"/post_message/"
+
+#define kSendPushNotificationTokenURL [kBaseURL stringByAppendingString:@"/api/v1/user/push/register/"]
