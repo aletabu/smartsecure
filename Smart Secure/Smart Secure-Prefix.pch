@@ -14,10 +14,10 @@
 #endif
 
 // Integration
-#define kBaseURL @"http://smart-integration.no-ip.org"
+//#define kBaseURL @"http://smart-integration.no-ip.org"
 // Test
-//#define kBaseURL @"http://190.2.33.1:8001"
-//#define kBaseURL @"http://apps.smartsecure.com.ar"
+//define kBaseURL @"http://190.2.33.1:8001"
+#define kBaseURL @"http://apps.smartsecure.com.ar"
 
 
 

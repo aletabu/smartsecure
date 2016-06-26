@@ -158,6 +158,7 @@ BOOL alarmSent;
         [self showNextImage];
                                     
     } else {
+        [self stopPanicTimer];
         [self showBlackScreen];
         [self sendPanicAlarm];
     }
@@ -179,9 +180,6 @@ BOOL alarmSent;
 }
 
 - (void) goToNextScreen {
-    [self stopPanicTimer];
-    [self stopTimeOutTimer];
-
     [self.superViewController loadMessagesScreen];
 }
 
@@ -196,6 +194,11 @@ BOOL alarmSent;
 
 
     exit(0);
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self stopPanicTimer];
+    [self stopTimeOutTimer];
 }
 
 
