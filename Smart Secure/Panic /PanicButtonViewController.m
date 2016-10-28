@@ -158,9 +158,11 @@ BOOL alarmSent;
         [self showNextImage];
                                     
     } else {
-        [self stopPanicTimer];
-        [self showBlackScreen];
-        [self sendPanicAlarm];
+        if(!alarmSent){
+            [self stopPanicTimer];
+            [self showBlackScreen];
+            [self sendPanicAlarm];
+        }
     }
 }
 

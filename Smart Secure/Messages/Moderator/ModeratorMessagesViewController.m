@@ -114,7 +114,8 @@
     
     [self updateSendMessageComponentsState : event];
     [self updateEventState:event];
-    self.incidentText.text = [event objectForKey:@"cause"];
+    NSString * cause = [event objectForKey:@"cause"];
+    self.incidentText.text = cause==nil? @"Sin causa" : cause;
     [self setDate:[event objectForKey:@"start"]];
     [self updateMessagesForCurrentEvent];
 
